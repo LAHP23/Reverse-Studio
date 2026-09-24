@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReVerse Studio | Moda Circular</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-principal">
+      <div class="logo">
+        <a href="index.html">ReVerse Studio</a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="#" class="carrito" id="btn-carrito">
+         Carrito (<span id="contador-carrito">0</span>)
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner-principal">
+      <div class="banner-texto">
+        <h1>Moda circular, prendas únicas</h1>
+        <p>
+          Streetwear sustentable y ropa de segunda mano intervenida (upcycled)
+          por diseñadores locales. Prendas únicas e inclusivas que reducen
+          el impacto del fast fashion.
+        </p>
+        <button type="button" onclick="location.href='productos.html'">
+          Ver catálogo
+        </button>
+      </div>
+
+      <img
+        src="img/logosReverse.png"
+        alt="Prenda upcycled de la colección ReVerse Studio">
+    </section>
+
+    <section class="video-marca">
+      <h2>Conoce nuestro proceso de upcycling</h2>
+      <video controls width="100%"
+        poster="img/logosReverse.png">
+        <source src="video/uwu.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </section>
+
+    <section class="destacados">
+      <h2>Productos destacados</h2>
+
+
+      <div id="contenedor-destacados" class="grid-productos"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ReVerse Studio. Moda circular hecha en Chile.</p>
+    <ul class="redes">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">TikTok</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/data-productos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/productos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      cargarProductos('contenedor-destacados', listaProductos.slice(0, 3));
+    });
+  </script>
+</body>
+</html>

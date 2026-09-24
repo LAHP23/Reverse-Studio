@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | ReVerse Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-principal">
+      <div class="logo">
+        <a href="index.html">ReVerse Studio</a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" class="activo">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <a href="#" class="carrito" id="btn-carrito">
+         Carrito (<span id="contador-carrito">0</span>)
+      </a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h2>Catálogo de Productos</h2>
+    <p class="subtitulo">
+      Prendas únicas, upcycled e intervenidas por diseñadores locales.
+    </p>
+
+    <div id="contenedor-productos" class="grid-productos"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ReVerse Studio. Moda circular hecha en Chile.</p>
+    <ul class="redes">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">TikTok</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/data-productos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/productos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      cargarProductos('contenedor-productos', listaProductos);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | ReVerse Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-principal">
+      <div class="logo">
+        <a href="index.html">ReVerse Studio</a>
+      </div>
+
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+
+      <a href="#" class="carrito" id="btn-carrito">
+        🛒 Carrito (<span id="contador-carrito">0</span>)
+      </a>
+    </nav>
+  </header>
+
+  <main class="contenedor-principal">
+    <h2>Contáctanos</h2>
+    <p class="subtitulo">
+      ¿Tienes dudas, un pedido o quieres colaborar como diseñador/a? Escríbenos.
+    </p>
+
+    <form id="form-contacto" novalidate>
+      <div class="campo">
+        <label for="nombre">Nombre completo</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          maxlength="100"
+          required
+          placeholder="Ej: María Pérez">
+        <small class="mensaje-error" id="error-nombre"></small>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          maxlength="100"
+          required
+          placeholder="Ej: maria@duoc.cl">
+        <small class="mensaje-error" id="error-correo"></small>
+      </div>
+
+      <div class="campo">
+        <label for="motivo">Motivo de contacto</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Selecciona una opción</option>
+          <option value="consulta">Consulta general</option>
+          <option value="soporte">Soporte de pedido</option>
+          <option value="colaboracion">Colaboración como diseñador/a</option>
+        </select>
+        <small class="mensaje-error" id="error-motivo"></small>
+      </div>
+
+      <div class="campo">
+        <label for="comentario">Comentario o mensaje</label>
+        <textarea
+          id="comentario"
+          name="comentario"
+          maxlength="500"
+          rows="5"
+          required
+          placeholder="Cuéntanos en qué te podemos ayudar..."></textarea>
+        <small class="mensaje-error" id="error-comentario"></small>
+      </div>
+
+      <button type="submit">Enviar mensaje</button>
+      <p class="mensaje-exito" id="mensaje-exito" role="status"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ReVerse Studio. Moda circular hecha en Chile.</p>
+    <ul class="redes">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">TikTok</a></li>
+    </ul>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

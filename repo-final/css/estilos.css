@@ -1,0 +1,373 @@
+:root {
+  --verde-oliva: #3B5A45;
+  --verde-oliva-oscuro: #2A4232;
+  --tierra: #C29B7F;
+  --negro-urbano: #1A1A1A;
+  --fuente-titulo: 'Archivo Black', sans-serif;
+  --fuente-texto: 'Work Sans', sans-serif;
+
+
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--negro-urbano);
+
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  line-height: 1.15;
+}
+
+button {
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radio);
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+:focus-visible {
+  outline: 3px solid var(--tierra);
+  outline-offset: 2px;
+}
+
+
+.nav-principal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--verde-oliva);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo a {
+  font-family: var(--fuente-titulo);
+  color: var(--crema);
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  
+}
+
+.menu {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: var(--crema);
+  font-weight: 500;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transicion);
+}
+
+.menu a:hover,
+.menu a.activo {
+
+}
+
+.carrito {
+  color: var(--crema);
+  font-weight: 600;
+  background-color: var(--verde-oliva-oscuro);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radio);
+  transition: background-color var(--transicion);
+}
+
+.carrito:hover {
+  background-color: var(--negro-urbano);
+}
+
+
+.banner-principal {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-texto {
+  flex: 1 1 380px;
+}
+
+.banner-texto h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--verde-oliva);
+  margin-bottom: 1.2rem;
+}
+
+.banner-texto p {
+  max-width: 60ch;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.banner-texto button,
+form button[type="submit"] {
+  background-color: var(--tierra);
+  color: var(--negro-urbano);
+  padding: 0.85rem 1.8rem;
+  font-size: 1rem;
+}
+
+.banner-texto button:hover,
+form button[type="submit"]:hover {
+  background-color: var(--verde-oliva);
+  color: var(--crema);
+}
+
+.banner-principal img {
+  flex: 1 1 380px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+
+.video-marca {
+  background-color: var(--negro-urbano);
+  padding: 3.5rem 5%;
+  text-align: center;
+}
+
+.video-marca h2 {
+  color: var(--crema);
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.video-marca video {
+  max-width: 800px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.destacados,
+.contenedor-principal {
+  padding: 3.5rem 5%;
+}
+
+.destacados h2,
+.contenedor-principal h2 {
+  color: var(--verde-oliva);
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.8rem;
+}
+
+.tarjeta-producto {
+  background-color: var(--blanco);
+  border: 1px solid #E4DED2;
+  border-radius: var(--radio);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta-producto img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.tarjeta-producto h3 {
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1rem 0.2rem;
+}
+
+.tarjeta-producto .precio {
+  color: var(--verde-oliva);
+  font-weight: 600;
+  padding: 0 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-producto button {
+  background-color: var(--verde-oliva);
+  color: var(--crema);
+  padding: 0.75rem 1rem;
+  margin-top: auto;
+}
+
+.tarjeta-producto button:hover {
+  background-color: var(--negro-urbano);
+}
+
+
+form {
+  max-width: 560px;
+  background-color: var(--blanco);
+  border: 1px solid #E4DED2;
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #CFC7B8;
+  border-radius: var(--radio);
+  background-color: var(--crema);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--verde-oliva);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.campo.invalido input,
+.campo.invalido select,
+.campo.invalido textarea {
+  border-color: var(--error);
+}
+
+.mensaje-error {
+  color: var(--error);
+  font-size: 0.82rem;
+  min-height: 1.1em;
+}
+
+.mensaje-exito {
+  color: var(--exito);
+  font-weight: 600;
+  margin-top: 1rem;
+  min-height: 1.2em;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.4rem;
+}
+
+
+footer {
+  background-color: var(--negro-urbano);
+  color: var(--crema);
+  padding: 2rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.redes {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.redes a:hover {
+  color: var(--tierra);
+}
+
+
+@media (max-width: 640px) {
+  .nav-principal {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu {
+    justify-content: center;
+    order: 3;
+    width: 100%;
+  }
+
+  .banner-principal {
+    text-align: center;
+  }
+
+  .banner-texto p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
